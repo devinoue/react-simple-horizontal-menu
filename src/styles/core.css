@@ -1,0 +1,38 @@
+.react-simple-horizontal-menu-container {
+  background-color: ghostwhite;
+  display: flex;
+  min-height: 55px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.react-simple-horizontal-menu-rtl {
+  flex-direction: row-reverse;
+}
+
+.react-simple-horizontal-menu-items-container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.react-simple-horizontal-menu-item-selected {
+  font-weight: 700;
+}
+
+.react-simple-horizontal-menu-item-not-selected {
+  font-weight: 300;
+}
+
+.react-simple-horizontal-menu-item-common {
+  text-align: center;
+  min-width: 78px;
+  cursor: pointer;
+
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 3500ms;
+  white-space: nowrap;
+}

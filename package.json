@@ -1,0 +1,76 @@
+{
+  "name": "react-simple-horizontal-menu",
+  "version": "1.0.14",
+  "description": "Creating horizontal menu in react made easy.",
+  "author": "Masaharu Inoue",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "bundle": "rollup -c",
+    "clean": "rm -rf dist && mkdir -p dist",
+    "css": "sass src/styles:dist/styles --no-source-map",
+    "build": "run-s clean css bundle",
+    "lint": "eslint --cache . --ext js,.ts,.tsx&&  prettier --cache --check --ignore-unknown --ignore-path .gitignore \"./**/*.{ts,tsx,css}\"",
+    "lint:fix": "eslint --cache . --ext js,.ts,.tsx --fix &&  prettier --cache --write --ignore-unknown --ignore-path .gitignore \"./**/*.{ts,tsx,css}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prepublishOnly": "run-s build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack4": "^6.5.15",
+    "@storybook/manager-webpack4": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react": "^18.0.26",
+    "@typescript-eslint/parser": "^5.47.0",
+    "babel-loader": "^8.3.0",
+    "dayjs": "^1.11.7",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-autofix": "^1.1.0",
+    "eslint-plugin-storybook": "^0.6.8",
+    "eslint-plugin-typescript-sort-keys": "^2.1.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "sass": "^1.57.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.1",
+    "react-dom": ">=16.13.1"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "menu",
+    "component",
+    "horizontal menu",
+    "rtl"
+  ]
+}
